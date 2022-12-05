@@ -3,8 +3,11 @@ package van.exam.van.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Entity
+@Table(uniqueConstraints={@UniqueConstraint(columnNames={"contactNo"})})
 public class Employee {
     
     private @Id @GeneratedValue Long id;
